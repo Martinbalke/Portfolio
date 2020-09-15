@@ -493,7 +493,7 @@ a:active {
       flex-direction: column;
       height: 100vh; } }
   .contact__text {
-    width: 100%;
+    width: 90%;
     height: 40%;
     padding: 5%;
     z-index: -1;
