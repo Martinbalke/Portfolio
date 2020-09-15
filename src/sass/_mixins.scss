@@ -55,6 +55,9 @@
         color: var(--color-grey);
     }
   }
+  @include respond(4k) {
+    font-size: var(--font-large)
+  }
 }
 
 @mixin paragraph-text {
@@ -63,6 +66,9 @@
     opacity: 0.9;
     letter-spacing: 1px;
     line-height: 4rem;
+    @include respond(4k) {
+      font-size: 5rem;
+    }
 }
 
 @mixin absolute-center {
