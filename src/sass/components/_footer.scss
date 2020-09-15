@@ -1,0 +1,78 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  @include padded-container;
+  height: 30vh;
+
+  &__text {
+    width: 60%;
+    order: 1;
+  }
+  &__tertiary {
+    font-size: var(--font-medium);
+    margin-bottom: var(--margin-medium);
+    font-weight: 700;
+  }
+
+  &__description {
+    width: 60%;
+    @include description-text(false);
+    @include respond(tablet) {
+      font-size: var(--font-small);
+    }
+
+  }
+
+  &__nav {
+    width: 10%;
+    text-align: center;
+    margin-left: auto;
+    order: 3;
+
+    &-text {
+      font-size: var(--font-small);
+      color: var(--color-grey);
+      transition: all 0.3s;
+
+      & > p{
+       margin-top: var(--margin-medium); 
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &__socials {
+    order: 2;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &-copywrite {
+      font-size: var(--font-small);
+    }
+    & > a {
+      height: 4rem;
+      color: transparent;
+      width: 4rem;
+      margin-left: var(--margin-medium);
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:nth-child(2) {
+        background: url("../images/linkedin.svg");
+        background-size: cover;
+      }
+
+      &:nth-child(3) {
+        background: url("../images/github.svg");
+        background-size: cover;
+      }
+    }
+  }
+}

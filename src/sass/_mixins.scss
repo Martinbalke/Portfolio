@@ -1,0 +1,88 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 28em) {
+            @content;
+        } //450px
+    }
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        } //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {
+            @content;
+        } //1200px
+    }
+    @if $breakpoint == 4k {
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        } //1800
+    }
+}
+
+
+@mixin button {
+    width: 20rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: var(--font-small);
+    font-weight: 700;
+    border-radius: var(--border-radius);
+}
+
+
+@mixin padded-container {
+    width: 90%;
+    margin: 5vh 2.5% 0 2.5%;
+    padding: 2.5%;
+}
+
+@mixin description-text($reverse) {
+  font-size: var(--font-medium);
+  margin-bottom: var(--margin-small);
+  font-weight: 500;
+  color: var(--color-grey);
+  @if $reverse == true {
+      color: var(--color-white);
+  }
+
+  & em {
+    color: var(--color-white);
+    @if $reverse == true {
+        color: var(--color-grey);
+    }
+  }
+}
+
+@mixin paragraph-text {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    line-height: 4rem;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin gradient-text{
+    -webkit-text-fill-color: transparent;
+    background: rgb(255, 190, 11);
+    background: linear-gradient(
+      150deg,
+      rgba(255, 190, 11, 1) 20%,
+      rgba(251, 86, 7, 1) 40%,
+      rgba(255, 0, 110, 1) 60%,
+      rgba(131, 56, 236, 1) 80%,
+      rgba(58, 134, 255, 1) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}

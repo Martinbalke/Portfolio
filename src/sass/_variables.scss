@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap');
+:root{
+
+  --font-primary: 'Inter', sans-serif;
+
+
+  --color-primary: #1E2028;
+  --color-white:  #ffffff;
+  --color-black: #12141C;
+  --color-grey: #898A8E;
+
+
+  --color-accent1: #FFBE0B;
+  --color-accent1-light: #FFC31F;
+  --color-accent2: #FB5607;
+  --color-accent2-light: #FC6722;
+  --color-accent3: #FF006E;
+  --color-accent3-light: #ff006f2c;
+  --color-accent4: #8338EC;
+  --color-accent4-light: #9757EF;
+  --color-accent5: #3A86FF;
+  --color-accent5-light: #5C9AFF;
+
+  --box-shadow-small: 4px 2px 1rem rgba(0,0,0,.1);
+  --box-shadow-medium: 4px 2px 1rem rgba(0,0,0,.2);
+  --box-shadow-color1: -4px 7px 1rem  #ffc31f2d;
+  --box-shadow-color2: -4px 7px 1rem #fc672231;
+  --box-shadow-color3: -4px 7px 1rem  #FF006E2c;
+  --box-shadow-color4: -4px 7px 1rem #8338ec17;
+  --box-shadow-color5: -4px 7px 1rem #3A86FF2c;
+  
+  
+  --margin-small: 1rem;
+  --margin-medium: 2rem;
+  --margin-large: 3rem;
+
+
+  --font-small: 1.5rem;
+  --font-medium: 2.5rem;
+  --font-large: 5rem;
+  --font-header: 8rem;
+
+
+  --border-radius: 1rem;
+
+
+
+}

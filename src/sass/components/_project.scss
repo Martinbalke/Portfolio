@@ -1,0 +1,287 @@
+.projects {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5vh 5%;
+  padding: 2.5% 0;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  box-shadow: var(--box-shadow-color4);
+
+  @include respond(tablet) {
+    height: 45vh;
+  }
+
+  &__tertiary {
+    padding: 0 2.5%;
+    margin-bottom: var(--margin-medium);
+    font-size: var(--font-header);
+    font-weight: 700;
+  }
+
+  &__subtext {
+    padding: 0 2.5%;
+    font-size: var(--font-medium);
+    margin-bottom: var(--margin-medium);
+    font-weight: 500;
+    color: var(--color-accent4);
+    line-height: 5rem;
+  }
+
+  &__description {
+    padding: 0 2.5%;
+    width: 75%;
+    @include description-text(true);
+    @include respond(tablet) {
+      width: 80%;
+    }
+  }
+}
+
+.project {
+  display: flex;
+  height: 70vh;
+  @include padded-container;
+  @include respond(tablet) {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &__text-container {
+    height: 100%;
+    padding: 2.5%;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__technologies {
+    margin-top: var(--margin-large);
+    margin-bottom: var(--margin-small);
+    font-size: var(--font-medium);
+    font-weight: 300;
+  }
+
+  &__tertiary {
+    margin-bottom: var(--margin-small);
+    font-size: var(--font-header);
+    font-weight: 700;
+  }
+  &__description {
+    width: 70%;
+    @include description-text(true);
+  }
+
+  &__button {
+    @include button;
+    margin-top: var(--margin-medium);    
+    transition: all 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__views-container {
+    position: relative;
+    height: 70%;
+    padding: 2.5%;
+    width: 60%;
+    @include respond(tablet) {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &__view-desktop {
+    width: 80%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-size: cover;
+    background-position: top;
+    transition: ease-in-out 1s;
+  }
+
+  &__view-mobile {
+    position: absolute;
+
+    left: -20%;
+    top: 15%;
+    background-color: var(--color-primary);
+    height: 40rem;
+    width: 20rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-size: cover;
+    background-position: top;
+    transition: ease-in-out 1s;
+
+    &:hover {
+      background-position: bottom;
+    }
+    @include respond(tablet) {
+      left: 0;
+    }
+
+    &-icons {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      height: 10%;
+      border-radius: var(--border-radius);
+      background: var(--color-white);
+      box-shadow: var(--box-shadow-small);
+
+      & > div {
+        position: relative;
+        z-index: 3;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        &:nth-child(1) {
+          background: url("../images/menu.svg");
+          background-size: cover;
+        }
+        &:nth-child(2) {
+          background: url("../images/home.svg");
+          background-size: cover;
+        }
+        &:nth-child(3) {
+          background: url("../images/undo.svg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+///////SELECTOR STYLES FOR DYNAMICALLY CHANGING COLORS AND LAYOUT
+
+.selector {
+  & > .project {
+    &:nth-child(1) {
+      & .project__technologies {
+        color: var(--color-accent4);
+      }
+
+      & .project__button {
+        background: linear-gradient(to right, var(--color-accent4), var(--color-accent3));
+
+        &:hover {
+          box-shadow: var(--box-shadow-color3);
+        }
+      }
+
+      & .project__view-desktop {
+        background: url("../images/Goalspace-desktop.png");
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          transition: ease-in-out 3s;
+          background-position: bottom;
+        }
+      }
+
+      & .project__view-mobile {
+        background-position: top;
+        background: url("../images/Goalspace-mobile.png");
+        background-size: cover;
+        box-shadow: var(--box-shadow-color3);
+
+        &:hover {
+          transition: ease-in-out 3s;
+          background-position: bottom;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+      @include respond(tablet) {
+        flex-direction: column;
+      }
+      & .project__technologies {
+        color: var(--color-accent5);
+      }
+
+      & .project__button {
+        background: linear-gradient(to right, var(--color-accent5), var(--color-accent4));
+
+        &:hover {
+          box-shadow: var(--box-shadow-color5);
+        }
+      }
+
+      & .project__views-container {
+        margin-right: 5rem;
+      }
+
+      & .project__view-desktop {
+        background: url("../images/Transcribe-desktop.png");
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          transition: ease-in-out 3s;
+          background-position: bottom;
+        }
+      }
+
+      & .project__view-mobile {
+        background-position: top;
+        background: url("../images/Transcribe-mobile.png");
+        background-size: cover;
+        box-shadow: var(--box-shadow-color5);
+        left: 75% !important;
+        @include respond(tablet) {
+          left: 58% !important;
+        }
+
+        &:hover {
+          transition: ease-in-out 3s;
+          background-position: bottom;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      & .project__technologies {
+        color: var(--color-accent1);
+      }
+
+      & .project__button {
+        background: linear-gradient(to right, var(--color-accent1), var(--color-accent2));
+
+        &:hover {
+          box-shadow: var(--box-shadow-color1);
+        }
+      }
+
+      & .project__view-desktop {
+        background: url("../images/Imflix-desktop.png");
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          transition: ease-in-out 3s;
+          background-position: bottom;
+        }
+      }
+
+      & .project__view-mobile {
+        background-position: center;
+        background: url("../images/Imflix-mobile.png");
+        background-size: cover;
+        box-shadow: var(--box-shadow-color1);
+      }
+    }
+  }
+}
