@@ -10,7 +10,7 @@
         } //900px
     }
     @if $breakpoint == desktop {
-        @media only screen and (max-width: 67em) {
+        @media only screen and (max-width: 62.5em) {
             @content;
         } //1200px
     }

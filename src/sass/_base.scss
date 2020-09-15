@@ -17,7 +17,7 @@ html {
   }
 
   @include respond(desktop) {
-    font-size: 75%;
+    font-size: 70%;
   }
   @include respond(tablet) {
     font-size: 56.25%;
