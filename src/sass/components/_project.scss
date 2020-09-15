@@ -100,7 +100,6 @@
   &__view-desktop {
     width: 80%;
     height: 70%;
-    overflow: hidden;
     border-radius: var(--border-radius);
     background-size: cover;
     background-position: top;
@@ -116,7 +115,6 @@
     height: 40rem;
     width: 20rem;
     border-radius: var(--border-radius);
-    overflow: hidden;
     background-size: cover;
     background-position: top;
     transition: ease-in-out 1s;
