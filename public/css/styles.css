@@ -179,10 +179,9 @@ a, a:visited, a:active {
         color: var(--color-white); }
   .hero__button {
     width: 20rem;
-    display: flex;
     height: 5rem;
-    justify-content: center;
-    align-items: center;
+    line-height: 5rem;
+    text-align: center;
     padding: 1rem 2rem;
     font-size: var(--font-small);
     font-weight: 700;
@@ -293,10 +292,9 @@ a, a:visited, a:active {
       color: var(--color-grey); }
   .project__button {
     width: 20rem;
-    display: flex;
     height: 5rem;
-    justify-content: center;
-    align-items: center;
+    line-height: 5rem;
+    text-align: center;
     padding: 1rem 2rem;
     font-size: var(--font-small);
     font-weight: 700;

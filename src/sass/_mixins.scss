@@ -24,10 +24,9 @@
 
 @mixin button {
     width: 20rem;
-    display: flex;
     height: 5rem;
-    justify-content: center;
-    align-items: center;
+    line-height: 5rem;
+    text-align: center;
     padding: 1rem 2rem;
     font-size: var(--font-small);
     font-weight: 700;
