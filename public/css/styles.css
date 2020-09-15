@@ -47,12 +47,12 @@ html {
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 90%; } }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 60em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 28em) {
     html {
-      font-size: 30%; } }
+      font-size: 35%; } }
 
 body {
   color: var(--color-white);
@@ -131,7 +131,7 @@ a, a:visited, a:active {
     width: 55%;
     align-self: center;
     margin-left: var(--margin-medium); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .hero__text {
         width: 100%;
         text-align: center; } }
@@ -172,6 +172,7 @@ a, a:visited, a:active {
     font-size: var(--font-small);
     font-weight: 700;
     border-radius: var(--border-radius);
+    font-size: var(--font-medium);
     align-self: center;
     z-index: 500;
     transition: all 0.3s; }
@@ -203,7 +204,7 @@ a, a:visited, a:active {
   border-radius: var(--border-radius);
   background-color: var(--color-primary);
   box-shadow: var(--box-shadow-color4); }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 60em) {
     .projects {
       height: 45vh; } }
   .projects__tertiary {
@@ -229,7 +230,7 @@ a, a:visited, a:active {
     .projects__description em {
       color: var(--color-white);
       color: var(--color-grey); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .projects__description {
         width: 80%; } }
 
@@ -239,7 +240,7 @@ a, a:visited, a:active {
   width: 90%;
   margin: 5vh 2.5% 0 2.5%;
   padding: 2.5%; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 60em) {
     .project {
       flex-direction: column;
       height: 100vh; } }
@@ -287,7 +288,7 @@ a, a:visited, a:active {
     height: 70%;
     padding: 2.5%;
     width: 60%; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .project__views-container {
         width: 100%;
         height: 100vh; } }
@@ -313,7 +314,7 @@ a, a:visited, a:active {
     transition: ease-in-out 1s; }
     .project__view-mobile:hover {
       background-position: bottom; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .project__view-mobile {
         left: 0; } }
     .project__view-mobile-icons {
@@ -371,7 +372,7 @@ a, a:visited, a:active {
 
 .selector > .project:nth-child(2) {
   flex-direction: row-reverse; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 60em) {
     .selector > .project:nth-child(2) {
       flex-direction: column; } }
   .selector > .project:nth-child(2) .project__technologies {
@@ -395,7 +396,7 @@ a, a:visited, a:active {
     background-size: cover;
     box-shadow: var(--box-shadow-color5);
     left: 75% !important; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .selector > .project:nth-child(2) .project__view-mobile {
         left: 58% !important; } }
     .selector > .project:nth-child(2) .project__view-mobile:hover {
@@ -432,7 +433,7 @@ a, a:visited, a:active {
   width: 90%;
   margin: 5vh 2.5% 0 2.5%;
   padding: 2.5%; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 60em) {
     .contact {
       flex-direction: column;
       height: 100vh; } }
@@ -461,7 +462,7 @@ a, a:visited, a:active {
     margin-bottom: var(--margin-small);
     font-weight: 500;
     color: var(--color-white); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .contact__description {
         width: 100%; } }
     .contact__description em {
@@ -469,7 +470,7 @@ a, a:visited, a:active {
 
 .business {
   position: absolute;
-  left: 52.5%;
+  margin-left: 52.5%;
   top: 10%;
   z-index: 100;
   height: 20rem;
@@ -486,17 +487,21 @@ a, a:visited, a:active {
   transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
   box-shadow: 0;
   transition: transform 0.4s ease, box-shadow 0.4s ease; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 60em) {
     .business {
-      left: 15%;
+      align-self: center;
+      margin-left: 0;
       top: 40%;
       transform: none;
       box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4); } }
+  @media only screen and (max-width: 28em) {
+    .business {
+      top: 30%; } }
   .business:hover {
     cursor: pointer;
     transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .business:hover {
         transform: none; } }
   .business:focus {
@@ -514,7 +519,7 @@ a, a:visited, a:active {
     display: block;
     background-color: grey;
     transition: transform 0.4s ease, height 0.4s ease, width 0.4s ease; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .business::before, .business::after {
         display: none; } }
   .business::before {
@@ -568,6 +573,7 @@ a, a:visited, a:active {
   width: 90%;
   margin: 5vh 2.5% 0 2.5%;
   padding: 2.5%;
+  margin-top: -10vh;
   height: 30vh; }
   .footer__text {
     width: 60%;
@@ -584,7 +590,7 @@ a, a:visited, a:active {
     color: var(--color-grey); }
     .footer__description em {
       color: var(--color-white); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 60em) {
       .footer__description {
         font-size: var(--font-small); } }
   .footer__nav {

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   @include padded-container;
+  margin-top: -10vh;
   height: 30vh;
 
   &__text {

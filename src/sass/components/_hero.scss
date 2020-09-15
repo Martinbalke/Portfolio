@@ -69,6 +69,7 @@
 
   &__button {
     @include button;
+    font-size: var(--font-medium);
     align-self: center;
     z-index: 500;
     transition: all 0.3s;
