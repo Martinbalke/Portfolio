@@ -125,6 +125,13 @@
     @include respond(tablet) {
       left: 0;
     }
+    @include respond(desktop){
+      left: -15%;
+    }
+
+    @include respond(4k){
+      left: -10%;
+    }
 
     &-icons {
       display: flex;

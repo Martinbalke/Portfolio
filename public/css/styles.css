@@ -45,7 +45,7 @@ html {
   font-size: 62.5%; }
   @media only screen and (min-width: 127.5em) {
     html {
-      font-size: 90%; } }
+      font-size: 80%; } }
   @media only screen and (min-width: 115.5em) {
     html {
       font-size: 70%; } }
@@ -360,6 +360,12 @@ a:active {
     @media only screen and (max-width: 60em) {
       .project__view-mobile {
         left: 0; } }
+    @media only screen and (min-width: 115.5em) {
+      .project__view-mobile {
+        left: -15%; } }
+    @media only screen and (min-width: 127.5em) {
+      .project__view-mobile {
+        left: -10%; } }
     .project__view-mobile-icons {
       display: flex;
       justify-content: space-evenly;
@@ -481,6 +487,7 @@ a:active {
       flex-direction: column;
       height: 100vh; } }
   .contact__text {
+    width: 100%;
     height: 40%;
     padding: 5%;
     z-index: -1;

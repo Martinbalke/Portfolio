@@ -13,7 +13,7 @@
 html {
   font-size: 62.5%;
   @include respond(4k) {
-    font-size: 90%;
+    font-size: 80%;
   }
 
   @include respond(desktop) {
