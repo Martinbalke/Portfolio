@@ -1,11 +1,11 @@
 .waves{
   position: absolute;
-  overflow: hidden;
+	overflow: hidden;
   z-index: -100;
   height: 50rem;
-  width: 100%;
-  top: 70%;
-  right: 0;
+  width: 100vw;
+	top: 90vh;
+
 
   &-animation{
 		position: absolute;
@@ -15,7 +15,6 @@
 		bottom: 0;
 		display: block;
 		min-width: 100%;
-    margin: auto 0;
     height: 20rem;
 
 		& >path:nth-of-type(3){
@@ -24,6 +23,9 @@
 
 		& > path {
 			animation: Waves 17390ms ease-in-out infinite alternate-reverse both;
+			@include respond(tablet){
+					animation: WavesMobile 17390ms ease-in-out infinite alternate-reverse both;
+				}
 			animation-timing-function: cubic-bezier(.25, 0, .75, 1);
 			will-change: transform
 		}
@@ -43,10 +45,23 @@
 
 @keyframes Waves {
 	0% {
-		transform: translateX(-550px)
+		transform: translateX(-750px)
 	}
 
 	100% {
 		transform: translateX(-20px)
 	}
+
+}
+
+
+@keyframes WavesMobile {
+	0% {
+		transform: translateX(-1450px)
+	}
+
+	100% {
+		transform: translateX(-20px)
+	}
+
 }

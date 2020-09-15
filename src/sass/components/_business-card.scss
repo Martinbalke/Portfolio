@@ -3,9 +3,7 @@
   z-index: 1;
   position: relative;
   height: 90vh;
-  width: 90%;
-  margin: 5vh 2.5% 0 2.5%;
-  padding: 2.5%;
+ @include padded-container;
   
 
   @include respond(tablet) {
@@ -15,9 +13,8 @@
 
   &__text {
     height: 40%;
-    padding: 2.5%;
+    padding: 5%;
     z-index: -1;
-    width: 95%;
     border-radius: var(--border-radius);
     display: flex;
     background: var(--color-primary);
@@ -82,7 +79,7 @@
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
   }
   @include respond(mobile){
-    top: 30%;
+    top: 35%;
   }
 
   &:hover {

@@ -9,7 +9,7 @@ export default function Project({ technologies, projectName, description, mobile
         <p className="project__technologies">{technologies}</p>
         <h3 className="project__tertiary">{projectName}</h3>
         <p className="project__description">{description}</p>
-        <a href={website} target='_blank' rel='noreferrer noopener ' className='project__button'>Check It Out &nbsp; -></a>
+        <a href={website} target='_blank' rel='noreferrer noopener ' className='project__button'>{`Check It Out &nbsp; ->`}</a>
       </div>
       <div className="project__views-container">
         <div className="project__view-mobile">

@@ -2,15 +2,18 @@
   height: 40vh;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 5vh 5%;
-  padding: 2.5% 0;
+  @include padded-container;
   border-radius: var(--border-radius);
   background-color: var(--color-primary);
   box-shadow: var(--box-shadow-color4);
 
   @include respond(tablet) {
     height: 45vh;
+  }
+
+
+  @include respond(mobile) {
+    height: 35vh;
   }
 
   &__tertiary {

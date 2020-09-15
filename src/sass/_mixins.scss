@@ -35,9 +35,9 @@
 
 
 @mixin padded-container {
-    width: 90%;
-    margin: 5vh 2.5% 0 2.5%;
-    padding: 2.5%;
+    width: calc(100% - (5vw * 2));
+    margin: 5vh 2.5vw 0 2.5vw;
+    padding: 2.5vw;
 }
 
 @mixin description-text($reverse) {

@@ -13,18 +13,17 @@
 
 html{
   font-size: 62.5%;
-  overflow-x: hidden;
 
 
   @include respond(4k) {
-    font-size: 90%;
+    font-size: 75%;
   }
   @include respond(tablet) {
     font-size: 56.25%;
   }
 
   @include respond(mobile) {
-    font-size: 35%;
+    font-size: 32.5%;
   }
 }
 
@@ -33,7 +32,6 @@ body{
   font-family: var(--font-primary);
   box-sizing: inherit;
   width: 100vw;
-  background-color: black;
   background-image: linear-gradient(65deg, #181a25 0%, #12141C 74%);
 }
 

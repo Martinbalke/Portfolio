@@ -42,24 +42,22 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  overflow-x: hidden; }
+  font-size: 62.5%; }
   @media only screen and (min-width: 112.5em) {
     html {
-      font-size: 90%; } }
+      font-size: 75%; } }
   @media only screen and (max-width: 60em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 28em) {
     html {
-      font-size: 35%; } }
+      font-size: 32.5%; } }
 
 body {
   color: var(--color-white);
   font-family: var(--font-primary);
   box-sizing: inherit;
   width: 100vw;
-  background-color: black;
   background-image: linear-gradient(65deg, #181a25 0%, #12141C 74%); }
 
 a, a:visited, a:active {
@@ -71,9 +69,8 @@ a, a:visited, a:active {
   overflow: hidden;
   z-index: -100;
   height: 50rem;
-  width: 100%;
-  top: 70%;
-  right: 0; }
+  width: 100vw;
+  top: 90vh; }
   .waves-animation {
     position: absolute;
     top: 0;
@@ -82,7 +79,6 @@ a, a:visited, a:active {
     bottom: 0;
     display: block;
     min-width: 100%;
-    margin: auto 0;
     height: 20rem; }
     .waves-animation > path:nth-of-type(3) {
       filter: url(#gooey-blur); }
@@ -90,6 +86,9 @@ a, a:visited, a:active {
       animation: Waves 17390ms ease-in-out infinite alternate-reverse both;
       animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
       will-change: transform; }
+      @media only screen and (max-width: 60em) {
+        .waves-animation > path {
+          animation: WavesMobile 17390ms ease-in-out infinite alternate-reverse both; } }
     .waves-animation > path:nth-of-type(1) {
       animation-duration: 20580ms; }
     .waves-animation > path:nth-of-type(2) {
@@ -98,7 +97,13 @@ a, a:visited, a:active {
 
 @keyframes Waves {
   0% {
-    transform: translateX(-550px); }
+    transform: translateX(-750px); }
+  100% {
+    transform: translateX(-20px); } }
+
+@keyframes WavesMobile {
+  0% {
+    transform: translateX(-1450px); }
   100% {
     transform: translateX(-20px); } }
 
@@ -115,15 +120,24 @@ a, a:visited, a:active {
     align-self: flex-start;
     align-items: center;
     justify-content: space-evenly; }
+    @media only screen and (max-width: 28em) {
+      .hero__nav {
+        width: 100%; } }
     .hero__nav-tertiary {
       font-size: var(--font-small);
       font-weight: 700; }
+      @media only screen and (max-width: 28em) {
+        .hero__nav-tertiary {
+          font-size: var(--font-medium); } }
     .hero__nav-item {
       margin-left: var(--margin-medium); }
     .hero__nav-paragraph {
       font-size: var(--font-small);
       color: var(--color-grey);
       transition: all 0.3s; }
+      @media only screen and (max-width: 28em) {
+        .hero__nav-paragraph {
+          font-size: var(--font-medium); } }
       .hero__nav-paragraph:hover {
         cursor: pointer;
         color: var(--color-white); }
@@ -133,7 +147,7 @@ a, a:visited, a:active {
     margin-left: var(--margin-medium); }
     @media only screen and (max-width: 60em) {
       .hero__text {
-        width: 100%;
+        width: calc(100% - (var(--margin-medium) * 2));
         text-align: center; } }
     .hero__text-skills {
       margin-bottom: var(--margin-small);
@@ -176,6 +190,10 @@ a, a:visited, a:active {
     align-self: center;
     z-index: 500;
     transition: all 0.3s; }
+    @media only screen and (max-width: 60em) {
+      .hero__button {
+        position: relative;
+        top: -5vh; } }
     .hero__button > p > p {
       display: inline-block;
       padding: 0 1rem;
@@ -198,15 +216,18 @@ a, a:visited, a:active {
   height: 40vh;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 5vh 5%;
-  padding: 2.5% 0;
+  width: calc(100% - (5vw * 2));
+  margin: 5vh 2.5vw 0 2.5vw;
+  padding: 2.5vw;
   border-radius: var(--border-radius);
   background-color: var(--color-primary);
   box-shadow: var(--box-shadow-color4); }
   @media only screen and (max-width: 60em) {
     .projects {
       height: 45vh; } }
+  @media only screen and (max-width: 28em) {
+    .projects {
+      height: 35vh; } }
   .projects__tertiary {
     padding: 0 2.5%;
     margin-bottom: var(--margin-medium);
@@ -237,9 +258,9 @@ a, a:visited, a:active {
 .project {
   display: flex;
   height: 70vh;
-  width: 90%;
-  margin: 5vh 2.5% 0 2.5%;
-  padding: 2.5%; }
+  width: calc(100% - (5vw * 2));
+  margin: 5vh 2.5vw 0 2.5vw;
+  padding: 2.5vw; }
   @media only screen and (max-width: 60em) {
     .project {
       flex-direction: column;
@@ -430,18 +451,17 @@ a, a:visited, a:active {
   z-index: 1;
   position: relative;
   height: 90vh;
-  width: 90%;
-  margin: 5vh 2.5% 0 2.5%;
-  padding: 2.5%; }
+  width: calc(100% - (5vw * 2));
+  margin: 5vh 2.5vw 0 2.5vw;
+  padding: 2.5vw; }
   @media only screen and (max-width: 60em) {
     .contact {
       flex-direction: column;
       height: 100vh; } }
   .contact__text {
     height: 40%;
-    padding: 2.5%;
+    padding: 5%;
     z-index: -1;
-    width: 95%;
     border-radius: var(--border-radius);
     display: flex;
     background: var(--color-primary);
@@ -496,7 +516,7 @@ a, a:visited, a:active {
       box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4); } }
   @media only screen and (max-width: 28em) {
     .business {
-      top: 30%; } }
+      top: 35%; } }
   .business:hover {
     cursor: pointer;
     transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
@@ -570,9 +590,9 @@ a, a:visited, a:active {
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin: 5vh 2.5% 0 2.5%;
-  padding: 2.5%;
+  width: calc(100% - (5vw * 2));
+  margin: 5vh 2.5vw 0 2.5vw;
+  padding: 2.5vw;
   margin-top: -10vh;
   height: 30vh; }
   .footer__text {
@@ -592,7 +612,8 @@ a, a:visited, a:active {
       color: var(--color-white); }
     @media only screen and (max-width: 60em) {
       .footer__description {
-        font-size: var(--font-small); } }
+        font-size: var(--font-small);
+        width: 80%; } }
   .footer__nav {
     width: 10%;
     text-align: center;
@@ -613,6 +634,9 @@ a, a:visited, a:active {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; }
+    @media only screen and (max-width: 28em) {
+      .footer__socials {
+        margin-bottom: 2vh; } }
     .footer__socials-copywrite {
       font-size: var(--font-small); }
     .footer__socials > a {

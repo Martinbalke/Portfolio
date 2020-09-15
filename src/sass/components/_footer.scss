@@ -8,6 +8,7 @@
   &__text {
     width: 60%;
     order: 1;
+  
   }
   &__tertiary {
     font-size: var(--font-medium);
@@ -20,6 +21,7 @@
     @include description-text(false);
     @include respond(tablet) {
       font-size: var(--font-small);
+      width: 80%;
     }
 
   }
@@ -52,6 +54,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    @include respond(mobile){
+      margin-bottom: 2vh;
+    }
 
     &-copywrite {
       font-size: var(--font-small);
