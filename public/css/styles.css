@@ -45,6 +45,9 @@ html {
   font-size: 62.5%; }
   @media only screen and (min-width: 112.5em) {
     html {
+      font-size: 90%; } }
+  @media only screen and (max-width: 67em) {
+    html {
       font-size: 75%; } }
   @media only screen and (max-width: 60em) {
     html {
@@ -54,13 +57,16 @@ html {
       font-size: 32.5%; } }
 
 body {
+  overflow: hidden;
   color: var(--color-white);
   font-family: var(--font-primary);
   box-sizing: inherit;
   width: 100vw;
-  background-image: linear-gradient(65deg, #181a25 0%, #12141C 74%); }
+  background-image: linear-gradient(65deg, #181a25 0%, #12141c 74%); }
 
-a, a:visited, a:active {
+a,
+a:visited,
+a:active {
   color: inherit;
   text-decoration: none; }
 
@@ -86,6 +92,9 @@ a, a:visited, a:active {
       animation: Waves 17390ms ease-in-out infinite alternate-reverse both;
       animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
       will-change: transform; }
+      @media only screen and (min-width: 112.5em) {
+        .waves-animation > path {
+          animation: Waves4k 17390ms ease-in-out infinite alternate-reverse both; } }
       @media only screen and (max-width: 60em) {
         .waves-animation > path {
           animation: WavesMobile 17390ms ease-in-out infinite alternate-reverse both; } }
@@ -104,6 +113,12 @@ a, a:visited, a:active {
 @keyframes WavesMobile {
   0% {
     transform: translateX(-1450px); }
+  100% {
+    transform: translateX(-20px); } }
+
+@keyframes Waves4k {
+  0% {
+    transform: translateX(-450px); }
   100% {
     transform: translateX(-20px); } }
 

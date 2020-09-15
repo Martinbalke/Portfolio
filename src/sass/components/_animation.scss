@@ -1,13 +1,12 @@
-.waves{
-  position: absolute;
+.waves {
+	position: absolute;
 	overflow: auto;
-  z-index: -100;
-  height: 50rem;
-  width: 100vw;
+	z-index: -100;
+	height: 50rem;
+	width: 100vw;
 	top: 90vh;
 
-
-  &-animation{
+	&-animation {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -15,53 +14,63 @@
 		bottom: 0;
 		display: block;
 		min-width: 100%;
-    height: 20rem;
+		height: 20rem;
 
-		& >path:nth-of-type(3){
+		& > path:nth-of-type(3) {
 			filter: url(#gooey-blur);
 		}
 
 		& > path {
 			animation: Waves 17390ms ease-in-out infinite alternate-reverse both;
-			@include respond(tablet){
-					animation: WavesMobile 17390ms ease-in-out infinite alternate-reverse both;
-				}
-			animation-timing-function: cubic-bezier(.25, 0, .75, 1);
-			will-change: transform
+			
+			@include respond(4k) {
+				animation: Waves4k 17390ms ease-in-out infinite alternate-reverse both;
+			}
+			@include respond(tablet) {
+				animation: WavesMobile 17390ms ease-in-out infinite alternate-reverse both;
+			}
+
+			animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
+			will-change: transform;
 		}
 
 		& > path:nth-of-type(1) {
-			animation-duration: 20580ms
+			animation-duration: 20580ms;
 		}
 
 		& > path:nth-of-type(2) {
 			animation-delay: -500ms;
-			animation-duration: 13580ms
+			animation-duration: 13580ms;
 		}
 	}
-
-
 }
 
 @keyframes Waves {
 	0% {
-		transform: translateX(-750px)
+		transform: translateX(-750px);
 	}
 
 	100% {
-		transform: translateX(-20px)
+		transform: translateX(-20px);
 	}
-
 }
-
 
 @keyframes WavesMobile {
 	0% {
-		transform: translateX(-1450px)
+		transform: translateX(-1450px);
 	}
 
 	100% {
-		transform: translateX(-20px)
+		transform: translateX(-20px);
+	}
+}
+
+@keyframes Waves4k {
+	0% {
+		transform: translateX(-450px);
 	}
 
+	100% {
+		transform: translateX(-20px);
+	}
 }
