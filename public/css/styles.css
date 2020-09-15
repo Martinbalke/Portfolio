@@ -43,10 +43,10 @@
 
 html {
   font-size: 62.5%; }
-  @media only screen and (min-width: 112.5em) {
+  @media only screen and (min-width: 127.5em) {
     html {
       font-size: 90%; } }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (min-width: 115.5em) {
     html {
       font-size: 70%; } }
   @media only screen and (max-width: 60em) {
@@ -92,7 +92,7 @@ a:active {
       animation: Waves 17390ms ease-in-out infinite alternate-reverse both;
       animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
       will-change: transform; }
-      @media only screen and (min-width: 112.5em) {
+      @media only screen and (min-width: 127.5em) {
         .waves-animation > path {
           animation: Waves4k 17390ms ease-in-out infinite alternate-reverse both; } }
       @media only screen and (max-width: 60em) {
@@ -192,7 +192,7 @@ a:active {
       color: var(--color-grey); }
       .hero__text-description em {
         color: var(--color-white); }
-      @media only screen and (min-width: 112.5em) {
+      @media only screen and (min-width: 127.5em) {
         .hero__text-description {
           font-size: var(--font-large); } }
   .hero__button {
@@ -269,7 +269,7 @@ a:active {
     .projects__description em {
       color: var(--color-white);
       color: var(--color-grey); }
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (min-width: 127.5em) {
       .projects__description {
         font-size: var(--font-large); } }
     @media only screen and (max-width: 60em) {
@@ -311,7 +311,7 @@ a:active {
     .project__description em {
       color: var(--color-white);
       color: var(--color-grey); }
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (min-width: 127.5em) {
       .project__description {
         font-size: var(--font-large); } }
   .project__button {
@@ -632,7 +632,7 @@ a:active {
     color: var(--color-grey); }
     .footer__description em {
       color: var(--color-white); }
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (min-width: 127.5em) {
       .footer__description {
         font-size: var(--font-large); } }
     @media only screen and (max-width: 60em) {
