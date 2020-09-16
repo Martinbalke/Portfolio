@@ -21,7 +21,7 @@ export default function Hero() {
         <h1 className='hero__text-h1'><em>Creative</em> solutions and <em>intelligent</em> design patterns</h1>
         <h3 className='hero__text-description'>I develop software to <em>solve problems.</em></h3>
       </div>
-        <Button text={['Work Together ', <p>{'->'}</p>]} className='button hero__button' to='contact' />
+        <Button text={['']} className='button hero__button' to='projects' />
     </main>
   );
 
