@@ -92,9 +92,11 @@
     width: 5rem;
     transition: all 0.3s;
     animation: pulse 2s infinite ease-in;
-
     z-index: 500;
     transition: all 0.3s;
+    &:hover{
+      cursor: pointer;
+    }
 
     @include respond(tablet){
       position: relative;

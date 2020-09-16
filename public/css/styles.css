@@ -225,6 +225,8 @@ a:active {
     animation: pulse 2s infinite ease-in;
     z-index: 500;
     transition: all 0.3s; }
+    .hero__button:hover {
+      cursor: pointer; }
     @media only screen and (max-width: 60em) {
       .hero__button {
         position: relative;
