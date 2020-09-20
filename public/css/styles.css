@@ -688,9 +688,9 @@ a:active {
       margin-left: var(--margin-medium); }
       .footer__socials > a:hover {
         cursor: pointer; }
-      .footer__socials > a:nth-child(2) {
+      .footer__socials > a:nth-child(3) {
         background: url("../images/linkedin.svg");
         background-size: cover; }
-      .footer__socials > a:nth-child(3) {
+      .footer__socials > a:nth-child(2) {
         background: url("../images/github.svg");
         background-size: cover; }
