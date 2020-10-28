@@ -34,7 +34,7 @@ function App() {
 
         <Project
 
-          technologies='Jquery Handlebars PostrgeSQL'
+          technologies='Jquery Handlebars PSQL'
           projectName='Imflix'
           description={[`Taking the confusion out of Netflix's rating system. `, <em key='1'>Making the experience of searching for a new title chill.</em>]}
           website='http://imflix.herokuapp.com'

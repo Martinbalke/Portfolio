@@ -17,11 +17,11 @@
   --color-accent5-light: #5C9AFF;
   --box-shadow-small: 4px 2px 1rem rgba(0,0,0,.1);
   --box-shadow-medium: 4px 2px 1rem rgba(0,0,0,.2);
-  --box-shadow-color1: -4px 7px 1rem  #ffc31f2d;
-  --box-shadow-color2: -4px 7px 1rem #fc672231;
-  --box-shadow-color3: -4px 7px 1rem  #FF006E2c;
-  --box-shadow-color4: -4px 7px 1rem #8338ec17;
-  --box-shadow-color5: -4px 7px 1rem #3A86FF2c;
+  --box-shadow-color1: -4px 7px 1rem  #ffc31f11;
+  --box-shadow-color2: -4px 7px 1rem #fc672211;
+  --box-shadow-color3: -4px 7px 1rem  #FF006E11;
+  --box-shadow-color4: -4px 7px 1rem #8338ec11;
+  --box-shadow-color5: -4px 7px 1rem #3a85ff11;
   --margin-small: 1rem;
   --margin-medium: 2rem;
   --margin-large: 3rem;
@@ -135,7 +135,7 @@ a:active {
   justify-content: space-between;
   margin-bottom: 20vh; }
   .hero__nav {
-    margin-top: var(--margin-medium);
+    margin: var(--margin-large) 0;
     width: 60%;
     display: flex;
     align-self: flex-start;
@@ -356,7 +356,7 @@ a:active {
     transition: ease-in-out 1s; }
   .project__view-mobile {
     position: absolute;
-    left: -20%;
+    left: -15%;
     top: 15%;
     background-color: var(--color-primary);
     height: 40rem;
@@ -454,7 +454,7 @@ a:active {
     background: url("../images/Transcribe-mobile.png");
     background-size: cover;
     box-shadow: var(--box-shadow-color5);
-    left: 75% !important; }
+    left: 65% !important; }
     @media only screen and (max-width: 60em) {
       .selector > .project:nth-child(2) .project__view-mobile {
         left: 58% !important; } }
@@ -530,12 +530,12 @@ a:active {
 .business {
   position: absolute;
   margin-left: 52.5%;
-  top: 10%;
+  top: 15%;
   z-index: 100;
-  height: 20rem;
+  height: 15rem;
   padding: 2.5%;
   color: var(--color-white);
-  width: 50rem;
+  width: 40rem;
   outline: none;
   border: none;
   background-image: linear-gradient(65deg, #181a25 0%, #12141c 74%);
@@ -555,7 +555,9 @@ a:active {
       box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4); } }
   @media only screen and (max-width: 28em) {
     .business {
-      top: 35%; } }
+      top: 35%;
+      height: 20rem;
+      width: 50rem; } }
   .business:hover {
     cursor: pointer;
     transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);

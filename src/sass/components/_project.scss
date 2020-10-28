@@ -109,7 +109,7 @@
   &__view-mobile {
     position: absolute;
 
-    left: -20%;
+    left: -15%;
     top: 15%;
     background-color: var(--color-primary);
     height: 40rem;
@@ -248,7 +248,7 @@
         background: url("../images/Transcribe-mobile.png");
         background-size: cover;
         box-shadow: var(--box-shadow-color5);
-        left: 75% !important;
+        left: 65% !important;
         @include respond(tablet) {
           left: 58% !important;
         }

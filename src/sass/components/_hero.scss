@@ -1,122 +1,121 @@
 .hero {
-  display: flex;
+	display: flex;
   height: 80vh;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 20vh;
+  // overflow: hidden;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 20vh;
 
+	&__nav {
+		margin: var(--margin-large) 0;
+		width: 60%;
+		display: flex;
+		align-self: flex-start;
+		align-items: center;
+		justify-content: space-evenly;
+		@include respond(mobile) {
+			width: 100%;
+		}
 
-  &__nav {
-    margin-top: var(--margin-medium);
-    width: 60%;
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    justify-content: space-evenly;
-    @include respond(mobile){
-      width: 100%    }
+		&-tertiary {
+			font-size: var(--font-small);
+			font-weight: 700;
+			@include respond(mobile) {
+				font-size: var(--font-medium);
+			}
+		}
 
-    &-tertiary {
-      font-size: var(--font-small);
-      font-weight: 700;
-      @include respond(mobile){
-        font-size: var(--font-medium);
-      }
-    }
+		&-item {
+			margin-left: var(--margin-medium);
+		}
 
-    &-item {
-      margin-left: var(--margin-medium);
-    }
+		&-paragraph {
+			font-size: var(--font-small);
+			color: var(--color-grey);
+			transition: all 0.3s;
 
-    &-paragraph {
-      font-size: var(--font-small);
-      color: var(--color-grey);
-      transition: all 0.3s;
+			@include respond(mobile) {
+				font-size: var(--font-medium);
+			}
 
-      @include respond(mobile){
-        font-size: var(--font-medium);
-      }
+			&:hover {
+				cursor: pointer;
+				color: var(--color-white);
+			}
+		}
+	}
 
-      &:hover {
-        cursor: pointer;
-        color: var(--color-white);
-      }
-    }
-  }
+	&__text {
+		width: 55%;
+		align-self: center;
+		margin-left: var(--margin-medium);
 
-  &__text {
-    width: 55%;
-    align-self: center;
-    margin-left: var(--margin-medium);
+		@include respond(tablet) {
+			width: calc(100% - (var(--margin-medium) * 2));
+			text-align: center;
+		}
+		&-skills {
+			margin-bottom: var(--margin-small);
+			font-size: var(--font-medium);
+			font-weight: 300;
+			@include gradient-text;
+		}
 
-    @include respond(tablet) {
-      width: calc(100% - (var(--margin-medium) * 2));
-      text-align: center;
-    }
-    &-skills {
-      margin-bottom: var(--margin-small);
-      font-size: var(--font-medium);
-      font-weight: 300;
-      @include gradient-text;
-    }
+		&-h1 {
+			margin-bottom: var(--margin-small);
+			font-size: var(--font-header);
+			font-weight: 700;
 
-    &-h1 {
-      margin-bottom: var(--margin-small);
-      font-size: var(--font-header);
-      font-weight: 700;
+			& em {
+				font-weight: 400;
+				@include gradient-text;
+				padding: 0.3rem;
+			}
+		}
 
-      & em {
-        font-weight: 400;
-        @include gradient-text;
-        padding: 0.3rem;
-      }
-    }
+		&-description {
+			@include description-text(false);
+		}
+	}
 
-    &-description {
-      @include description-text(false);
-    }
-  }
+	&__button {
+		@include button;
+		content: url('../images/chevron-down.svg');
+		display: flex;
+		align-self: center;
+		align-items: center;
+		justify-content: center;
+		font-size: var(--font-medium);
+		background: rgba(255, 255, 255, 0.02);
+		padding: 0 1rem;
+		border-radius: 50%;
+		height: 7rem;
+		width: 5rem;
+		transition: all 0.3s;
+		animation: pulse 2s infinite ease-in;
+		z-index: 500;
+		transition: all 0.3s;
+		&:hover {
+			cursor: pointer;
+		}
 
-  &__button {
-    @include button;
-    content: url('../images/chevron-down.svg');
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-medium);
-    background: rgba(255,255,255, .02);
-    padding: 0 1rem;
-    border-radius: 50%;
-    height: 7rem;
-    width: 5rem;
-    transition: all 0.3s;
-    animation: pulse 2s infinite ease-in;
-    z-index: 500;
-    transition: all 0.3s;
-    &:hover{
-      cursor: pointer;
-    }
-
-    @include respond(tablet){
-      position: relative;
-      top: -5vh;
-    }
-
-
-  }
+		@include respond(tablet) {
+			position: relative;
+			top: -5vh;
+		}
+	}
 }
 
 @keyframes pulse {
-  0% {
-    transform: translateY(-2px);
-  }
+	0% {
+		transform: translateY(-2px);
+	}
 
-  70% {
-    transform: translateY(1px);
-  }
+	70% {
+		transform: translateY(1px);
+	}
 
-  100% {
-    transform: translateY(-2px);
-  }
+	100% {
+		transform: translateY(-2px);
+	}
 }
