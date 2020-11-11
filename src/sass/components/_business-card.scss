@@ -2,13 +2,14 @@
   display: flex;
   z-index: 1;
   position: relative;
-  height: 90vh;
  @include padded-container;
-  
+  margin-bottom: 30vh;
 
   @include respond(tablet) {
     flex-direction: column;
     height: 100vh;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
   }
 
   &__text {

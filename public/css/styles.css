@@ -62,7 +62,7 @@ body {
   font-family: var(--font-primary);
   box-sizing: inherit;
   width: 100vw;
-  background-image: linear-gradient(65deg, #181a25 0%, #12141c 74%); }
+  background: black; }
 
 a,
 a:visited,
@@ -246,7 +246,7 @@ a:active {
   flex-direction: column;
   width: calc(100% - (5vw * 2));
   margin: 5vh 2.5vw 0 2.5vw;
-  padding: 2.5vw;
+  padding: 2.5vh 2.5vw;
   border-radius: var(--border-radius);
   background-color: var(--color-primary);
   box-shadow: var(--box-shadow-color4); }
@@ -291,7 +291,7 @@ a:active {
   height: 70vh;
   width: calc(100% - (5vw * 2));
   margin: 5vh 2.5vw 0 2.5vw;
-  padding: 2.5vw; }
+  padding: 2.5vh 2.5vw; }
   @media only screen and (max-width: 60em) {
     .project {
       flex-direction: column;
@@ -488,14 +488,16 @@ a:active {
   display: flex;
   z-index: 1;
   position: relative;
-  height: 90vh;
   width: calc(100% - (5vw * 2));
   margin: 5vh 2.5vw 0 2.5vw;
-  padding: 2.5vw; }
+  padding: 2.5vh 2.5vw;
+  margin-bottom: 30vh; }
   @media only screen and (max-width: 60em) {
     .contact {
       flex-direction: column;
-      height: 100vh; } }
+      height: 100vh;
+      margin-top: 15vh;
+      margin-bottom: 5vh; } }
   .contact__text {
     width: 90%;
     height: 40%;
@@ -631,11 +633,10 @@ a:active {
 .footer {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - (5vw * 2));
-  margin: 5vh 2.5vw 0 2.5vw;
-  padding: 2.5vw;
-  margin-top: -10vh;
-  height: 30vh; }
+  margin: 2.5vh 2.5vw;
+  padding: 0 2.5vw;
+  height: 20vh;
+  max-height: 200px; }
   .footer__text {
     width: 60%;
     order: 1; }
@@ -644,7 +645,8 @@ a:active {
     margin-bottom: var(--margin-medium);
     font-weight: 700; }
   .footer__description {
-    width: 60%;
+    width: 100%;
+    line-height: 3.5rem;
     font-size: var(--font-medium);
     margin-bottom: var(--margin-small);
     font-weight: 500;
@@ -664,11 +666,11 @@ a:active {
     margin-left: auto;
     order: 3; }
     .footer__nav-text {
-      font-size: var(--font-small);
+      font-size: 2rem;
       color: var(--color-grey);
       transition: all 0.3s; }
       .footer__nav-text > p {
-        margin-top: var(--margin-medium); }
+        margin-bottom: var(--margin-medium); }
       .footer__nav-text:hover {
         cursor: pointer;
         color: var(--color-white); }
@@ -676,7 +678,7 @@ a:active {
     order: 2;
     width: 30%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end; }
     @media only screen and (max-width: 28em) {
       .footer__socials {
