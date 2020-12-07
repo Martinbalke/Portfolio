@@ -413,7 +413,7 @@ a:active {
     box-shadow: var(--box-shadow-color3); }
 
 .selector > .project:nth-child(1) .project__view-desktop {
-  background: url("../images/Goalspace-desktop.png");
+  background: url("../images/Transcribe-desktop.png");
   background-size: cover;
   background-position: top; }
   .selector > .project:nth-child(1) .project__view-desktop:hover {
@@ -422,7 +422,7 @@ a:active {
 
 .selector > .project:nth-child(1) .project__view-mobile {
   background-position: top;
-  background: url("../images/Goalspace-mobile.png");
+  background: url("../images/Transcribe-mobile.png");
   background-size: cover;
   box-shadow: var(--box-shadow-color3); }
   .selector > .project:nth-child(1) .project__view-mobile:hover {
@@ -443,7 +443,7 @@ a:active {
   .selector > .project:nth-child(2) .project__views-container {
     margin-right: 5rem; }
   .selector > .project:nth-child(2) .project__view-desktop {
-    background: url("../images/Transcribe-desktop.png");
+    background: url("../images/Goalspace-desktop.png");
     background-size: cover;
     background-position: top; }
     .selector > .project:nth-child(2) .project__view-desktop:hover {
@@ -451,7 +451,7 @@ a:active {
       background-position: bottom; }
   .selector > .project:nth-child(2) .project__view-mobile {
     background-position: top;
-    background: url("../images/Transcribe-mobile.png");
+    background: url("../images/Goalspace-mobile.png");
     background-size: cover;
     box-shadow: var(--box-shadow-color5);
     left: 65% !important; }
